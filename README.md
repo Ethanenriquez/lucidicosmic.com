@@ -1,15 +1,20 @@
 ## Live Site  
-<a href="https://ethanenriquez.github.io/enriquezink.com" target="_blank" rel="noopener noreferrer">EnriquezInk.com</a>
+<a href="https://ethanenriquez.github.io/lucidicosmic.com" target="_blank" rel="noopener noreferrer">lucidicosmic.com</a>
 
 ## Feedback  
-Found something buggy? You can type here → [Issues](https://github.com/Ethanenriquez/enriquezink.com/issues)
+Found something buggy? You can type here → [Issues](https://github.com/Ethanenriquez/lucidicosmic.com/issues)
+
+## Features (1.0.13.3.2026)
+Contact Section Removed for Compact
+
+Small Bug Fixes
 
 ## Features (1.0.12.3.2026)
 Rename EnriquezInk to Lucidicosmic
 
-Refining the name identity
+Refining the Name Identity
 
-Minor update
+Minor Update
 
 ## Features (0.9.12.2.2026)
 Some Files Removed for Code Reduction
