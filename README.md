@@ -4,6 +4,13 @@
 ## Feedback  
 Found something buggy? You can type here → [Issues](https://github.com/Ethanenriquez/enriquezink.com/issues)
 
+## Features (1.0.12.3.2026)
+Rename EnriquezInk to Lucidicosmic
+
+Refining the name identity
+
+Minor update
+
 ## Features (0.9.12.2.2026)
 Some Files Removed for Code Reduction
 
