@@ -100,6 +100,20 @@
         opacity: 1;
     }
 
+    #links {
+        display: block;
+    }
+
+    .homebuttons a {
+        width: clamp(150px, 90vw, 1000px);
+        margin-right: 0;
+        margin-left: 22px;
+    }
+
+    .linksLeftBar {
+        display: none;
+    }
+
     /*About*/
     .aboutopened {
         width: 100%;

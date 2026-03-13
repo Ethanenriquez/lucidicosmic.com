@@ -81,7 +81,7 @@
       <div class="nav-item">
         <a href="#about" id="aboutbtn" style="--i: 2">About</a>
       </div>
-      <div class="nav-item">
+      <div class="nav-item" id="links">
         <a href="#links" id="linkbtn" style="--i: 1">Links</a>
       </div>
     </nav>
@@ -131,7 +131,7 @@
 
   </div>
 
-  <!-- Links Section -->
+  <!-- Links Section (Mobile Only) -->
   <div id="popupBackgroundBlur"></div>
   <div id="noiseTexture2"></div>
   <div id="linkopened" class="popup">
@@ -159,10 +159,37 @@
     </div>
   </div>
 
-  <!-- Home Buttons -->
-  <div class="homebuttons">
-    <a href="#myart" id="myartBtn" class="myart">My Art</a>
-    <a href="#comicseries" id="comicseriesBtn" class="comicseries">Comic Series</a>
+  <!--Flexbox Homebutton-->
+  <div class="flexbox">
+
+    <!-- Links Left Bar (Desktop Only)-->
+    <div class="linksLeftBar">
+      <a href="https://ko-fi.com/ethanenriquez" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-coffee"></i><span class="text-label"></span>
+      </a>
+      <a href="https://www.webtoons.com/p/community/en/u/Ethanenriquez" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-book"></i><span class="text-label"></span>
+      </a>
+      <a href="https://x.com/ethanenriquez01" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-x-twitter"></i><span class="text-label"></span>
+      </a>
+      <a href="https://www.instagram.com/ethanjurrienenriquez/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i><span class="text-label"></span>
+      </a>
+      <a href="https://www.pinterest.com/ethanenriquez466/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-pinterest"></i><span class="text-label"></span>
+      </a>
+      <a href="https://linktr.ee/Ethanenriquez" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-link"></i><span class="text-label"></span>
+      </a>
+    </div>
+
+    <!-- Home Buttons -->
+    <div class="homebuttons">
+      <a href="#myart" id="myartBtn" class="myart">My Art</a>
+      <a href="#comicseries" id="comicseriesBtn" class="comicseries">Comic Series</a>
+    </div>
+
   </div>
 
   <!-- My Art Section -->
@@ -223,7 +250,8 @@
       <h2 class="comicseriesTitle">Hello There</h2>
       <div class="comicseriesDesc">
         <p>
-          This is the first comic series I've created. But this plot story and lore is not fully developed yet. Very soon.
+          This is the first comic series I've created. But this plot story and lore is not fully developed yet. Very
+          soon.
         </p>
       </div>
 

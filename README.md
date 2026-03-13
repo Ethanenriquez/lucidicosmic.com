@@ -5,6 +5,8 @@
 Found something buggy? You can type here → [Issues](https://github.com/Ethanenriquez/lucidicosmic.com/issues)
 
 ## Features (1.0.13.3.2026)
+Links Refine Update to the Left Bar
+
 Contact Section Removed for Compact
 
 Small Bug Fixes
