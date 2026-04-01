@@ -33,7 +33,6 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/Home.css" />
   <link rel="stylesheet" href="css/About.css" />
-  <link rel="stylesheet" href="css/Links.css" />
   <link rel="stylesheet" href="css/MyArt.css" />
   <!--<link rel="stylesheet" href="css/CommissionArt.css" />
   <link rel="stylesheet" href="css/CharacterDesign.css" />-->
@@ -64,28 +63,69 @@
 </head>
 
 <body>
-  <!-- The Header -->
-  <header class="tophead">
-    <a class="title">Lucidicosmic</a>
 
-    <!-- Menu Toggle -->
-    <input type="checkbox" id="check" />
-    <label for="check" class="hamburger" role="button" aria-label="Toggle navigation" tabindex="0">
-      <span class="line"></span>
-      <span class="line"></span>
-      <span class="line"></span>
-    </label>
+  <!-- Home Section -->
+  <div class="flexbox">
 
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="nav-item">
-        <a href="#about" id="aboutbtn" style="--i: 2">About</a>
-      </div>
-      <div class="nav-item" id="links">
-        <a href="#links" id="linkbtn" style="--i: 1">Links</a>
-      </div>
-    </nav>
-  </header>
+    <!-- The Header -->
+    <header class="tophead">
+      <a class="title">Lucidicosmic</a>
+
+      <!-- Navigation -->
+      <nav class="navbar">
+        <div class="nav-item">
+          <a href="#about" id="aboutbtn" style="--i: 2">About</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Home Buttons -->
+    <div class="homebuttons">
+      <a href="#myart" id="myartBtn" class="myart">My Art</a>
+      <a href="#comicseries" id="comicseriesBtn" class="comicseries">Comic Series</a>
+    </div>
+
+    <!-- Home Gradient Hover-->
+    <!-- Links -->
+    <div class="links">
+
+      <a href="https://x.com/ethanenriquez01" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-x-twitter"></i><span class="text-label">X/Twitter</span>
+      </a>
+
+      <a href="https://discord.com/channels/1410523796724645920/1477910775765930066" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-discord"></i><span class="text-label">Discord</span>
+      </a>
+
+      <a href="https://www.instagram.com/ethanjurrienenriquez/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-instagram"></i><span class="text-label">Instagram</span>
+      </a>
+
+      <a href="https://www.pinterest.com/ethanenriquez466/" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-pinterest"></i><span class="text-label">Pinterest</span>
+      </a>
+
+      <a href="https://www.webtoons.com/p/community/en/u/Ethanenriquez" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-book"></i><span class="text-label">Webtoon</span>
+      </a>
+
+      <a href="https://ko-fi.com/ethanenriquez" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-coffee"></i><span class="text-label">Ko-fi</span>
+      </a>
+
+      <a href="https://linktr.ee/Ethanenriquez" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-link"></i><span class="text-label">Linktree</span>
+      </a>
+
+    </div>
+
+    <!-- The Footer -->
+    <div class="footer">
+      <span class="version-label">V1.1.1.4.2026</span>
+      <span class="copyright-text">&copy; 2026 EthanEnriquez</span>
+    </div>
+    
+  </div>
 
   <!-- About Section -->
   <div class="aboutBackground" id="aboutBackground">
@@ -127,67 +167,6 @@
 
         </div>
       </section>
-    </div>
-
-  </div>
-
-  <!-- Links Section (Mobile Only) -->
-  <div id="popupBackgroundBlur"></div>
-  <div id="noiseTexture2"></div>
-  <div id="linkopened" class="popup">
-    <button id="closePopup" aria-label="Close Links Popup"></button>
-    <h1 class="popup-title">Links</h1>
-    <div class="popup-links">
-      <a href="https://ko-fi.com/ethanenriquez" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-coffee"></i><span class="text-label">Ko-fi</span>
-      </a>
-      <a href="https://www.webtoons.com/p/community/en/u/Ethanenriquez" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-book"></i><span class="text-label">Webtoon</span>
-      </a>
-      <a href="https://x.com/ethanenriquez01" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-x-twitter"></i><span class="text-label">X/Twitter</span>
-      </a>
-      <a href="https://www.instagram.com/ethanjurrienenriquez/" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-instagram"></i><span class="text-label">Instagram</span>
-      </a>
-      <a href="https://www.pinterest.com/ethanenriquez466/" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-pinterest"></i><span class="text-label">Pinterest</span>
-      </a>
-      <a href="https://linktr.ee/Ethanenriquez" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-link"></i><span class="text-label">Linktree</span>
-      </a>
-    </div>
-  </div>
-
-  <!--Flexbox Homebutton-->
-  <div class="flexbox">
-
-    <!-- Links Left Bar (Desktop Only)-->
-    <div class="linksLeftBar">
-      <a href="https://ko-fi.com/ethanenriquez" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-coffee"></i><span class="text-label"></span>
-      </a>
-      <a href="https://www.webtoons.com/p/community/en/u/Ethanenriquez" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-book"></i><span class="text-label"></span>
-      </a>
-      <a href="https://x.com/ethanenriquez01" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-x-twitter"></i><span class="text-label"></span>
-      </a>
-      <a href="https://www.instagram.com/ethanjurrienenriquez/" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-instagram"></i><span class="text-label"></span>
-      </a>
-      <a href="https://www.pinterest.com/ethanenriquez466/" target="_blank" rel="noopener noreferrer">
-        <i class="fab fa-pinterest"></i><span class="text-label"></span>
-      </a>
-      <a href="https://linktr.ee/Ethanenriquez" target="_blank" rel="noopener noreferrer">
-        <i class="fas fa-link"></i><span class="text-label"></span>
-      </a>
-    </div>
-
-    <!-- Home Buttons -->
-    <div class="homebuttons">
-      <a href="#myart" id="myartBtn" class="myart">My Art</a>
-      <a href="#comicseries" id="comicseriesBtn" class="comicseries">Comic Series</a>
     </div>
 
   </div>
@@ -266,12 +245,8 @@
     </div>
   </div>
 
-  <!-- The Footer -->
-  <span class="version-label">V1.0.13.3.2026</span>
-  <span class="copyright-text">&copy; 2026 EthanEnriquez</span>
-
+  <!-- JavaScript Links -->
   <script type="module" src="js/about.js"></script>
-  <script type="module" src="js/links.js"></script>
   <script type="module" src="js/myart.js"></script>
   <!--<script type="module" src="js/commissionart.js"></script>
   <script type="module" src="js/characterdesign.js"></script>-->

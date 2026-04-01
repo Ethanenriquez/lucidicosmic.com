@@ -3,9 +3,6 @@
 /*Home CSS*/
 body,
 html {
-    position: fixed;
-    width: 100%;
-    min-height: 100%;
     margin: 0;
     padding: 0;
     background-color: #252525;
@@ -21,6 +18,25 @@ html {
     background-attachment: fixed;
     font-family: "Inter", sans-serif;
     user-select: none;
+    overflow-x: hidden;
+}
+
+/*Flexbox for Homepage*/
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    min-height: 100dvh;
+}
+
+/*Top Head*/
+.tophead {
+    width: 100%;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    z-index: 2;
 }
 
 /*EnriquezInk Title*/
@@ -35,10 +51,9 @@ html {
         0 0 18px rgba(255, 241, 195, 0.1);
     border-radius: 8px;
     text-decoration: none;
-    margin: 0 20px 0 20px;
+    margin: 0 10px 0 20px;
     padding: 10px;
     cursor: default;
-    z-index: 25;
     transition: 0.75s;
 }
 
@@ -53,23 +68,13 @@ html {
     transition: 0.25s;
 }
 
-/*Menu Invisible*/
-#check {
-    display: none;
-}
-
-.hamburger {
-    display: none;
-    z-index: 30;
-}
-
 /*Navigation*/
 .navbar {
     display: flex;
     justify-content: flex-end;
     align-self: center;
     gap: 8px;
-    margin-right: 20px;
+    margin: 0 20px 0 10px;
 }
 
 .nav-item a {
@@ -86,54 +91,27 @@ html {
 }
 
 .nav-item a:hover {
+    background-color: rgba(255, 255, 255, 0.05);
     color: #FFF4DB;
     box-shadow:
-        0 0 18px rgba(255, 241, 195, 0.5);
-    text-shadow:
-        5px 5px 10px rgba(0, 0, 0, 0),
-        -5px -5px 10px rgba(255, 255, 255, 0);
-    background: rgba(255, 255, 255, 0.05);
+        2px 2px 8px rgba(255, 220, 131, 0.15),
+        -2px -2px 8px rgba(255, 255, 255, 0.15);
     border: solid 1px rgba(255, 241, 195, 0.15);
     backdrop-filter: blur(10px);
     transform: scale(1.05);
     transition: 0.25s;
 }
 
-#links {
-    display: none;
-}
-
-/*Top Head*/
-.tophead {
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-    position: fixed;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    z-index: 10;
-}
-
-/*Flexbox for Homepage*/
-.flexbox {
-    display: flex;
-    min-height: 100vh;
-}
-
 /*Home Button*/
 .homebuttons {
-    flex: 1;
-    height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: clamp(100px, 14vw, 110px);
+    justify-content: flex-start;
     box-sizing: border-box;
+    padding-top: 10px;
+    flex: 1;
     gap: 25px;
-    margin-right: 80px;
     z-index: 1;
 }
 
@@ -151,7 +129,7 @@ html {
     background: rgba(48, 48, 48, 0.5);
     box-shadow:
         10px 10px 20px rgba(0, 0, 0, 0.6),
-        -5px -5px 20px rgba(255, 255, 255, 0.25);
+        -5px -5px 20px rgba(255, 255, 255, 0.15);
     border-radius: 20px;
     transition: 0.75s;
     z-index: 1;
@@ -163,107 +141,6 @@ html {
     transition: 0.25s;
 }
 
-/*Links Left Bar (Desktop Only)*/
-.linksLeftBar {
-    display: flex;
-    flex-direction: column;
-    width: 80px;
-    padding-top: clamp(100px, 14vw, 110px);
-    gap: 10px;
-    z-index: 1;
-}
-
-.linksLeftBar a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    border: solid 1px rgba(255, 255, 255, 0.05);
-    border-radius: 0 8px 8px 0;
-    background: rgba(20, 20, 20, 0.25);
-    backdrop-filter: blur(10px);
-    width: 70px;
-    height: 70px;
-    transition: 0.75s;
-}
-
-.linksLeftBar i {
-    font-size: 24px;
-    display: block;
-}
-
-.linksLeftBar a:hover {
-    width: 100px;
-    border: solid 1px white;
-    transition: 0.25s;
-}
-
-/*Ko-fi*/
-.linksLeftBar a[href*="ko-fi"] {
-    color: #FF6433;
-}
-
-.linksLeftBar a[href*="ko-fi"]:hover {
-    background-color: #FF6433;
-    box-shadow: 0 0 30px #FF6433;
-    color: #FFF;
-}
-
-/*Webtoon*/
-.linksLeftBar a[href*="webtoons"] {
-    color: #00DC64;
-}
-
-.linksLeftBar a[href*="webtoons"]:hover {
-    background-color: #00DC64;
-    box-shadow: 0 0 30px #00DC64;
-    color: #FFF;
-}
-
-/*X/Twitter*/
-.linksLeftBar a[href*="x.com"] {
-    color: #FFFFFF;
-}
-
-.linksLeftBar a[href*="x.com"]:hover {
-    background-color: #000000;
-    box-shadow: 0 0 30px #FFFFFF;
-    color: #FFF;
-}
-
-/*Instagram*/
-.linksLeftBar a[href*="instagram"] {
-    color: #C13584;
-}
-
-.linksLeftBar a[href*="instagram"]:hover {
-    background-color: #C13584;
-    box-shadow: 0 0 30px #C13584;
-    color: #FFF;
-}
-
-/*Pinterest*/
-.linksLeftBar a[href*="pinterest"] {
-    color: #BD081C;
-}
-
-.linksLeftBar a[href*="pinterest"]:hover {
-    background-color: #BD081C;
-    box-shadow: 0 0 30px #BD081C;
-    color: #FFF;
-}
-
-/*Linktree*/
-.linksLeftBar a[href*="linktr.ee"] {
-    color: #138E3E;
-}
-
-.linksLeftBar a[href*="linktr.ee"]:hover {
-    background-color: #138E3E;
-    box-shadow: 0 0 30px #138E3E;
-    color: #FFF;
-}
-
 /*My Art*/
 .myart {
     color: #508EFF;
@@ -273,7 +150,7 @@ html {
 
 .myart:hover {
     color: #FFFFFF;
-    outline: solid 4px #FFFFFF;
+    outline: solid 2px #FFFFFF;
     background: #508EFF;
     box-shadow: 0 0 40px #508EFF;
     transition: 0.25s;
@@ -288,7 +165,7 @@ html {
 
 .commissionart:hover {
     color: #000000;
-    outline: solid 4px #000000;
+    outline: solid 2px #000000;
     background: #FFFFFF;
     box-shadow: 0 0 40px #FFFFFF;
     transition: 0.25s;
@@ -303,7 +180,7 @@ html {
 
 .characterdesign:hover {
     color: #FFFFFF;
-    outline: solid 4px #FFFFFF;
+    outline: solid 2px #FFFFFF;
     background: #FFDC83;
     box-shadow: 0 0 40px #FFDC83;
     transition: 0.25s;
@@ -318,18 +195,185 @@ html {
 
 .comicseries:hover {
     color: #FFFFFF;
-    outline: solid 4px #FFFFFF;
+    outline: solid 2px #FFFFFF;
     background: #68FF50;
     box-shadow: 0 0 40px #68FF50;
     transition: 0.25s;
 }
 
-/*© 2026 EthanEnriquez*/
-.copyright-text {
-    position: fixed;
+/*Links Bottom Bar*/
+.links {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    border-top: solid 1px rgba(255, 255, 255, 0);
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 10px;
+    z-index: 2;
+    transition: 0.5s;
+}
+
+.links:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+    border-top: solid 1px rgba(255, 255, 255, 0.05);
+    transition: 0.25s;
+}
+
+.links:hover a {
+    opacity: 1;
+}
+
+.links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    flex: 0 0 auto;
+    border: solid 1px rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    background: rgba(20, 20, 20, 0.25);
+    backdrop-filter: blur(10px);
+    width: 100px;
+    height: 60px;
+    transition: 0.75s;
+    opacity: 0.25;
+}
+
+.text-label {
+    display: none;
+}
+
+.links i {
+    font-size: 26px;
+    display: block;
+}
+
+.links a:hover {
+    border: solid 1px white;
+    transition: 0.25s;
+}
+
+.links::-webkit-scrollbar {
+    height: 4px;
+}
+
+.links::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.links::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.links::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+/*X/Twitter*/
+.links a[href*="x.com"] {
+    color: #FFFFFF;
+}
+
+.links a[href*="x.com"]:hover {
+    background-color: #000000;
+    box-shadow: 0 0 30px #FFFFFF;
+    color: #FFF;
+}
+
+/*Discord*/
+.links a[href*="discord"] {
+    color: #5865F2;
+}
+
+.links a[href*="discord"]:hover {
+    background-color: #5865F2;
+    box-shadow: 0 0 30px #5865F2;
+    color: #FFF;
+}
+
+/*Instagram*/
+.links a[href*="instagram"] {
+    color: #C13584;
+}
+
+.links a[href*="instagram"]:hover {
+    background-color: #C13584;
+    box-shadow: 0 0 30px #C13584;
+    color: #FFF;
+}
+
+/*Pinterest*/
+.links a[href*="pinterest"] {
+    color: #BD081C;
+}
+
+.links a[href*="pinterest"]:hover {
+    background-color: #BD081C;
+    box-shadow: 0 0 30px #BD081C;
+    color: #FFF;
+}
+
+/*Webtoon*/
+.links a[href*="webtoons"] {
+    color: #00DC64;
+}
+
+.links a[href*="webtoons"]:hover {
+    background-color: #00DC64;
+    box-shadow: 0 0 30px #00DC64;
+    color: #FFF;
+}
+
+/*Ko-fi*/
+.links a[href*="ko-fi"] {
+    color: #FF6433;
+}
+
+.links a[href*="ko-fi"]:hover {
+    background-color: #FF6433;
+    box-shadow: 0 0 30px #FF6433;
+    color: #FFF;
+}
+
+/*Linktree*/
+.links a[href*="linktr.ee"] {
+    color: #138E3E;
+}
+
+.links a[href*="linktr.ee"]:hover {
+    background-color: #138E3E;
+    box-shadow: 0 0 30px #138E3E;
+    color: #FFF;
+}
+
+/*Footer*/
+.footer {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    border-top: solid 1px rgba(255, 255, 255, 0.05);
+    z-index: 3;
+    transition: 0.75s;
+}
+
+.footer:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+    transition: 0.25s;
+}
+
+/*Version Label*/
+.version-label {
     font-size: 14px;
-    bottom: 10px;
-    right: 10px;
     padding: 10px;
     color: rgba(255, 255, 255, 0.1);
     background-color: rgba(37, 37, 37, 0);
@@ -338,14 +382,13 @@ html {
     box-shadow:
         2px 2px 8px rgba(255, 220, 131, 0),
         -2px -2px 8px rgba(255, 255, 255, 0);
-    margin-top: 5px;
+    margin: 0 10px 0 20px;
     cursor: default;
-    font-size: clamp(15px, 2vw, 18px);
     transition: 0.75s;
-    z-index: 15;
 }
 
-.copyright-text:hover {
+.version-label:hover {
+    background-color: rgba(255, 255, 255, 0.05);
     color: #FFFFFF;
     backdrop-filter: blur(10px);
     border: solid 1px rgba(255, 255, 255, 0.15);
@@ -356,12 +399,9 @@ html {
     transition: 0.25s;
 }
 
-/*Version Label*/
-.version-label {
-    position: fixed;
+/*© 2026 EthanEnriquez*/
+.copyright-text {
     font-size: 14px;
-    bottom: 10px;
-    left: 5px;
     padding: 10px;
     color: rgba(255, 255, 255, 0.1);
     background-color: rgba(37, 37, 37, 0);
@@ -370,13 +410,13 @@ html {
     box-shadow:
         2px 2px 8px rgba(255, 220, 131, 0),
         -2px -2px 8px rgba(255, 255, 255, 0);
+    margin: 0 20px 0 10px;
     cursor: default;
-    margin: 35px 0 0 5px;
     transition: 0.75s;
-    z-index: 15;
 }
 
-.version-label:hover {
+.copyright-text:hover {
+    background-color: rgba(255, 255, 255, 0.05);
     color: #FFFFFF;
     backdrop-filter: blur(10px);
     border: solid 1px rgba(255, 255, 255, 0.15);
