@@ -87,7 +87,7 @@
     position: relative;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    grid-auto-rows: 1fr;
+    grid-auto-rows: auto;
     box-sizing: border-box;
     padding: 30px 40px;
     gap: 20px;
@@ -121,6 +121,7 @@
 }
 
 .galleryImg {
+    display: block;
     width: 100%;
     height: 100%;
     aspect-ratio: 1.7;
@@ -150,6 +151,8 @@
 
 .galleryItem {
     position: relative;
+    aspect-ratio: 1.7;
+    max-width: 320px;
     border-radius: 20px;
     display: block;
 }
