@@ -4,10 +4,15 @@
 ## Feedback  
 Found something buggy? You can type here → [Issues](https://github.com/Ethanenriquez/lucidicosmic.com/issues)
 
-## Features (1.1.1.4.2026)
-Redesign Layout for home
+## Features (1.1.2.4.2026)
+Redesign Layout for My Art
 
-Links to bottom
+Small Bug Fixes
+
+## Features (1.1.1.4.2026)
+Redesign Layout for Home
+
+Links to Bottom
 
 Small Bug Fixes
 

@@ -9,7 +9,7 @@
     width: 100%;
     background-color: #252525;
     background-image: linear-gradient(-30deg,
-            rgba(96, 184, 255, 0.25) 0%,
+            rgba(96, 184, 255, 0.1) 0%,
             rgba(37, 37, 37, 0.75) 40%,
             rgba(37, 37, 37, 0.75) 70%,
             rgba(255, 255, 255, 0.1) 100%),
@@ -33,39 +33,64 @@
 }
 
 .myartTH {
-    top: 0;
-    left: 0;
-    border-bottom: solid 2px rgb(138, 179, 255, 0.15);
-    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25);
     width: 100%;
-    height: 80px;
-    backdrop-filter: blur(10px);
-    position: fixed;
+    padding: 10px 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    padding-left: 20px;
+    justify-content: center;
     box-sizing: border-box;
-    z-index: 30;
-    transition: 0.5s;
-}
-
-.myartTH.visible {
-    backdrop-filter: blur(10px);
+    border-bottom: solid 1px rgba(138, 179, 255, 0.1);
 }
 
 .myartTH h1 {
-    position: absolute;
-    color: white;
-    font-size: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: clamp(30px, 4vw, 40px);
+    background: rgba(0, 0, 0, 0.05);
+    border: solid 1px rgba(96, 184, 255, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow:
+        0 0 18px rgba(96, 184, 255, 0.1);
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 0 10px 0 20px;
+    padding: 10px;
+    cursor: default;
+    transition: 0.75s;
+}
+
+.myartTH h1:hover {
+    color: rgb(233, 245, 255);
+    background: rgba(255, 255, 255, 0.05);
+    text-shadow:
+        -4px -4px 8px rgba(255, 255, 255, 0.25),
+        8px 8px 8px rgba(0, 0, 0, 0.25);
+    box-shadow:
+        0 0 18px rgba(96, 184, 255, 0.35);
+    transition: 0.25s;
+}
+
+.galleryLayout {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    border-left: solid 1px rgba(138, 179, 255, 0.1);
+    border-right: solid 1px rgba(138, 179, 255, 0.1);
+    border-radius: 0 0 12px 12px;
+    box-shadow:
+        0 0 40px rgba(165, 196, 255, 0.25);
+    z-index: 2;
 }
 
 .myartMask {
     position: relative;
-    top: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-auto-rows: 1fr;
+    box-sizing: border-box;
+    padding: 30px 40px;
+    gap: 20px;
     width: 100%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -83,32 +108,12 @@
             rgba(0, 0, 0, 0) 100%);
 }
 
-.galleryLayout {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    padding: 40px;
-    margin: 0 auto;
-    gap: 30px;
-    box-sizing: border-box;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    grid-auto-rows: auto;
-    border-left: solid 2px rgba(138, 179, 255, 0.1);
-    border-right: solid 2px rgba(138, 179, 255, 0.1);
-    border-radius: 0 0 20px 20px;
-    box-shadow:
-        0 0 40px rgba(165, 196, 255, 0.25);
-    z-index: 2;
-}
-
 .myartMask::-webkit-scrollbar {
-    width: 10px;
+    width: 6px;
 }
 
 .myartMask::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.25);
-    border-radius: 10px;
 }
 
 .myartMask::-webkit-scrollbar-thumb:hover {
@@ -119,14 +124,14 @@
     width: 100%;
     height: 100%;
     aspect-ratio: 1.7;
-    border-radius: 20px;
-    border: 2px solid rgba(138, 179, 255, 0.25);
+    border-radius: 12px;
+    border: 1px solid rgba(138, 179, 255, 0.25);
     object-fit: cover;
     cursor: pointer;
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.25) 0%, rgba(200, 200, 200, 0.25) 70%, rgba(150, 150, 150, 0.25) 100%);
     box-shadow:
-        5px 5px 20px rgba(80, 142, 255, 0.25),
-        -5px -5px 20px rgba(255, 255, 255, 0.25);
+        5px 5px 14px rgba(80, 142, 255, 0.05),
+        -5px -5px 14px rgba(255, 255, 255, 0.05);
     -webkit-user-drag: none;
     user-select: none;
     opacity: 1;
@@ -134,11 +139,11 @@
 }
 
 .galleryImg:hover {
-    border-radius: 15px;
-    transform: scale(1.05);
+    border-radius: 10px;
+    transform: scale(1.03);
     box-shadow:
-        0 0 50px rgba(80, 142, 255, 0.35),
-        0 0 25px rgba(255, 255, 255, 0.2);
+        0 0 30px rgba(80, 142, 255, 0.2),
+        0 0 16px rgba(255, 255, 255, 0.1);
     z-index: 200;
     transition: 0.25s;
 }
@@ -156,12 +161,10 @@
     transform: translate(-50%, -50%) scale(1);
     width: 90%;
     height: 100px;
-    background: rgba(0, 0, 0, 0.5);
-    border-top: solid 1px rgb(255, 255, 255, 0.15);
-    border-bottom: solid 1px rgba(138, 179, 255, 0.15);
+    background: rgba(0, 0, 0, 0.64);
+    border: solid 1px rgba(138, 179, 255, 0.15);
     box-shadow:
-        0 5px 10px rgba(0, 0, 0, 0.5),
-        0 -5px 10px rgb(255, 255, 255, 0.25);
+        0 0 20px rgba(0, 0, 0, 0.8);
     border-radius: 10px;
     border-radius: inherit;
     backdrop-filter: blur(1px);
@@ -206,7 +209,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgb(0, 0, 0, 0.75);
+    background: rgb(0, 0, 0, 0.8);
     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 700' width='700' height='700' opacity='0.1'><defs><filter id='nnnoise-filter' x='-20%' y='-20%' width='140%' height='140%' filterUnits='objectBoundingBox' primitiveUnits='userSpaceOnUse' color-interpolation-filters='linearRGB'><feTurbulence type='fractalNoise' baseFrequency='0.2' numOctaves='4' seed='15' stitchTiles='stitch' x='0%' y='0%' width='100%' height='100%' result='turbulence'></feTurbulence><feSpecularLighting surfaceScale='11' specularConstant='0.9' specularExponent='20' lighting-color='%23ffffff' x='0%' y='0%' width='100%' height='100%' in='turbulence' result='specularLighting'><feDistantLight azimuth='3' elevation='103'></feDistantLight></feSpecularLighting></filter></defs><rect width='700' height='700' fill='transparent'></rect><rect width='700' height='700' fill='%23ffffff' filter='url(%23nnnoise-filter)'></rect></svg>");
     backdrop-filter: blur(10px);
     opacity: 0;
@@ -224,7 +227,6 @@
 }
 
 .myartImgLayoutPopup {
-    position: fixed;
     height: 100%;
     width: 60%;
     min-width: 500px;
@@ -234,9 +236,9 @@
     align-items: center;
     background: rgb(184, 209, 255, 0.1);
     backdrop-filter: blur(10px);
-    border-left: 2px solid rgba(184, 209, 255, 0.15);
-    border-right: 2px solid rgba(184, 209, 255, 0.15);
-    box-shadow: 0 0 40px rgba(184, 209, 255, 0.35);
+    border-left: 1px solid rgba(184, 209, 255, 0.15);
+    border-right: 1px solid rgba(184, 209, 255, 0.15);
+    box-shadow: 0 0 50px rgba(184, 209, 255, 0.5);
     pointer-events: auto;
     z-index: 501;
 }
@@ -248,11 +250,11 @@
     opacity: 0;
     transition: 0.5s;
     margin-bottom: 80px;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 10px;
     box-shadow:
-        0 0 50px rgba(139, 180, 255, 0.35),
-        0 0 25px rgba(255, 255, 255, 0.2);
+        0 0 30px rgba(139, 180, 255, 0.25),
+        0 0 15px rgba(255, 255, 255, 0.1);
     -webkit-user-drag: none;
     user-select: none;
 }
@@ -265,7 +267,7 @@
     position: absolute;
     bottom: 6%;
     background: rgba(0, 0, 0, 0.1);
-    border: solid 2px rgba(255, 255, 255, 0.05);
+    border: solid 1px rgba(255, 255, 255, 0.05);
     box-shadow: 0 -5px 10px rgba(115, 130, 159, 0.35);
     padding: 10px 40px 10px 40px;
     border-radius: 10px;
@@ -282,7 +284,7 @@
     font-weight: 700;
     font-size: 1.5rem;
     white-space: nowrap;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
     padding-bottom: 5px;
     margin-bottom: 10px;
     transition: 0.5s;
@@ -349,6 +351,6 @@
 }
 
 #closeArtPopup:hover {
-    transform: rotate(90deg) scale(1.2);
-    transition: 0.5s;
+    transform: scale(1.1);
+    transition: 0.25s;
 }
