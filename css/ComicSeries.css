@@ -7,12 +7,16 @@
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgb(43, 73, 39);
+    background-color: rgb(37, 37, 37);
     background-image: linear-gradient(-30deg,
             rgb(113, 195, 101, 0.25) 0%,
-            rgb(43, 73, 39) 40%,
-            rgb(43, 73, 39) 70%,
-            rgb(251, 255, 250, 0.15) 100%);
+            rgba(43, 73, 39, 0) 40%,
+            rgba(43, 73, 39, 0) 70%,
+            rgb(251, 255, 250, 0.15) 100%),
+        url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 700' width='700' height='700' opacity='0.1'><defs><filter id='nnnoise-filter' x='-20%' y='-20%' width='140%' height='140%' filterUnits='objectBoundingBox' primitiveUnits='userSpaceOnUse' color-interpolation-filters='linearRGB'><feTurbulence type='fractalNoise' baseFrequency='0.2' numOctaves='4' seed='15' stitchTiles='stitch' x='0%' y='0%' width='100%' height='100%' result='turbulence'></feTurbulence><feSpecularLighting surfaceScale='11' specularConstant='0.9' specularExponent='20' lighting-color='%23ffffff' x='0%' y='0%' width='100%' height='100%' in='turbulence' result='specularLighting'><feDistantLight azimuth='3' elevation='103'></feDistantLight></feSpecularLighting></filter></defs><rect width='700' height='700' fill='transparent'></rect><rect width='700' height='700' fill='%23ffffff' filter='url(%23nnnoise-filter)'></rect></svg>");
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -25,118 +29,67 @@
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+    transition: 0.5s;
 }
 
 .comicseriesTH {
-    top: 0;
-    left: 0;
-    border-bottom: 2px solid rgb(158, 255, 143, 0.15);
-    box-shadow: 0 20px 20px rgb(255, 255, 255, 0.05);
     width: 100%;
-    height: 80px;
-    background: rgb(92, 122, 87, 0.15);
-    backdrop-filter: blur(10px);
-    position: fixed;
+    padding: 10px 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    padding-left: 20px;
+    justify-content: center;
     box-sizing: border-box;
-    z-index: 50;
-    transition: 0.5s;
 }
 
 .comicseriesTH h1 {
-    position: absolute;
-    color: white;
-    font-size: 40px;
-    white-space: nowrap;
-    left: 50%;
-    transform: translateX(-50%);
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: clamp(30px, 4vw, 40px);
+    background: rgba(0, 0, 0, 0.05);
+    border: solid 1px rgba(113, 195, 101, 0.15);
+    backdrop-filter: blur(10px);
+    box-shadow:
+        0 0 18px rgba(113, 195, 101, 0.1);
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 0;
+    padding: 10px;
+    cursor: default;
+    transition: 0.75s;
 }
 
-.comicseriesFilterBlur {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    backdrop-filter: blur(2px);
-    background: transparent;
-    z-index: 30;
+.comicseriesTH h1:hover {
+    color: rgb(232, 255, 229);
+    background: rgba(255, 255, 255, 0.05);
+    text-shadow:
+        -4px -4px 8px rgba(255, 255, 255, 0.25),
+        8px 8px 8px rgba(0, 0, 0, 0.25);
+    box-shadow:
+        0 0 18px rgba(113, 195, 101, 0.35);
+    transition: 0.25s;
 }
 
-.comicseriesVectors {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
+.comicseriesLayout {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
     height: 100%;
-    pointer-events: none;
-    overflow: hidden;
-    z-index: 0;
-}
-
-.comicseriesVectors img {
-    position: absolute;
-    width: 100vw;
-    height: auto;
-    pointer-events: none;
-}
-
-.comicVector1 {
-    bottom: 0;
-    right: 0;
-    z-index: 0;
-}
-
-.comicVector2 {
-    top: 0;
-    left: 0;
-    z-index: 10;
-}
-
-.comicVector3 {
-    bottom: 0;
-    left: 0;
-    z-index: 20;
-}
-
-.noiseTexture4 {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 700 700' width='700' height='700' opacity='0.1'><defs><filter id='nnnoise-filter' x='-20%' y='-20%' width='140%' height='140%' filterUnits='objectBoundingBox' primitiveUnits='userSpaceOnUse' color-interpolation-filters='linearRGB'><feTurbulence type='fractalNoise' baseFrequency='0.2' numOctaves='4' seed='15' stitchTiles='stitch' x='0%' y='0%' width='100%' height='100%' result='turbulence'></feTurbulence><feSpecularLighting surfaceScale='11' specularConstant='0.9' specularExponent='20' lighting-color='%23ffffff' x='0%' y='0%' width='100%' height='100%' in='turbulence' result='specularLighting'><feDistantLight azimuth='3' elevation='103'></feDistantLight></feSpecularLighting></filter></defs><rect width='700' height='700' fill='transparent'></rect><rect width='700' height='700' fill='%23ffffff' filter='url(%23nnnoise-filter)'></rect></svg>");
-    background-repeat: repeat;
-    pointer-events: none;
-    z-index: 35;
-    transition: 0.5s;
+    padding-top: 10px;
 }
 
 .comicseriesTab {
-    position: fixed;
-    height: 70%;
-    max-height: 600px;
-    width: 40%;
-    max-width: 230px;
-    top: 52%;
-    left: 50%;
+    height: 560px;
+    width: 240px;
     padding: 10px;
-    transform: translate(-50%, -50%);
-    cursor: pointer;
-    background: rgb(20, 39, 17, 0.25);
+    background: rgba(44, 57, 42, 0.25);
     backdrop-filter: blur(20px);
-    border: 2px solid rgb(158, 255, 143, 0.15);
+    border: 1px solid rgb(158, 255, 143, 0.15);
     border-top-left-radius: 20px;
     border-top-right-radius: 30px;
     border-bottom-left-radius: 30px;
     box-shadow:
         5px 5px 20px rgba(0, 0, 0, 0.25),
-        -5px -5px 20px rgba(255, 255, 255, 0.25);
+        -5px -5px 20px rgba(255, 255, 255, 0.15);
     display: flex;
     flex-direction: column;
     overflow: hidden;
@@ -154,7 +107,7 @@
 
 .comicseriesTab h2 {
     color: white;
-    border-bottom: 1px solid rgb(158, 255, 143, 0.1);
+    border-bottom: 1px solid rgb(158, 255, 143, 0.15);
     font-size: 24px;
     margin: 0;
     padding: 6px;
@@ -227,37 +180,36 @@
     text-decoration: none;
     font-size: 18px;
     padding: 8px;
-    background: rgba(52, 88, 46, 0.1);
-    border: 1px solid rgb(158, 255, 143, 0);
-    border-radius: 8px 8px 0 16px;
+    border: 1px solid rgb(158, 255, 143, 0.15);
     box-shadow:
-        2px 2px 8px rgba(0, 0, 0, 0.25),
-        -2px -2px 8px rgba(255, 255, 255, 0.25);
-    transition: all 0.75s ease;
+        5px 5px 8px rgba(0, 0, 0, 0.15),
+        -2px -2px 8px rgba(255, 255, 255, 0.1);
+    border-radius: 8px 8px 0 16px;
+    transition: 0.75s;
 }
 
 .comicseriesLinks i {
     position: absolute;
     left: 12px;
     font-size: 24px;
+    transition: 0.75s;
+}
+
+.comicseriesLinks .text-label {
+    display: block;
 }
 
 .comicseriesLinks a:hover {
     color: rgb(203, 255, 199);
     background: rgba(52, 88, 46, 0.25);
-    border: 1px solid rgb(158, 255, 143, 0.25);
-    box-shadow:
-        0 0 20px rgb(167, 255, 153);
+    box-shadow: 0 0 20px rgba(158, 255, 143, 0.15);
     transform: scale(1.025);
 }
 
 .comicseriesTab:hover {
-    transform: translate(-50%, -50%) scale(1.05);
-    background: rgb(66, 120, 58, 0.35);
-    border: 2px solid rgb(158, 255, 143, 0.35);
+    transform: scale(1.05);
     border-radius: 20px;
-    box-shadow:
-        0 0 30px rgba(158, 255, 143, 0.35);
+    box-shadow: 0 0 30px rgba(158, 255, 143, 0.25);
     transition: 0.25s;
 }
 

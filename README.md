@@ -4,6 +4,11 @@
 ## Feedback  
 Found something buggy? You can type here → [Issues](https://github.com/Ethanenriquez/lucidicosmic.com/issues)
 
+## Features (1.1.3.4.2026)
+Redesign Layout for Comic Series
+
+Small Bug Fixes
+
 ## Features (1.1.2.4.2026)
 Redesign Layout for My Art
 
